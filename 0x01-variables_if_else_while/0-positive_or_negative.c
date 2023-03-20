@@ -4,16 +4,17 @@
 
 
 /**
- * main - prints if the number id positive,negative or 0
+ * main - prints if the number is positive,negative or 0
  * Return: Always 0
  */
 int main(void)
 {
 	int n;
 
-	srand(time(0));
 
+	srand(time(0));
 	n = rand() - RAND_MAX / 2;
+
 
 	if (n > 0)
 	{
@@ -23,10 +24,9 @@ int main(void)
 	{
 		printf("%d is zero\n", n);
 	}
-	else 
+	else
 	{
 		printf("%d is negative\n", n);
 	}
-
 	return (0);
 }
