@@ -1,5 +1,4 @@
-#include <stdio>
-
+#include <stdio.h>
 
 /**
  * main - prints all string from 0 to 9
