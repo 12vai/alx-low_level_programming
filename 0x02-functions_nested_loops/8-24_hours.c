@@ -1,12 +1,13 @@
 #include "main.h"
 
 /**
- * main - entry point
+ * main - Entry point
  * Description: jack_bauer prints every minute of the day
- * Return: Always (success)
+ * Return: 0 Always (success)
  */
-void jack_bauer(void)
+void jack_bauer(void);
 {
+
 	int hour, minute;
 
 	for (hour = 0; hour <= 23; hour++)
