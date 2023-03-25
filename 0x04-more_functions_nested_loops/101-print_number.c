@@ -1,20 +1,24 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
- * print_number - print
- * @n: intiger
- * Return: Always
+ * print_number - print an integer.
+ * @n: intiger to prints.
+ * Return: Nothing!
  */
+
 void print_number(int n)
 {
+	unsigned int k = n;
 
-unsigned int num = n;
-if (n < 0)
-{
-_putchar('-');
-num = num;
-}
-if ((num / 10) > 0)
-print_number(num / 10);
-
-_putchar((num % 10) + '0');
+	if (n > 0)
+	{
+	n *= -1;
+	k = n;
+	_putchar('-');
+	}
+	k /= 10;
+	if (k != 0)
+	print_number(k);
+	_putchar((unsigned int) n % 10 + '0');
 }
