@@ -1,20 +1,19 @@
 #include "main.h"
 
 /**
- * strlen - returns the length of a string
+ * _strlen - returnsthe length of the string
  * @s: string
- * Return: length
+ * Returns: length
  */
-int _strlen(char *s);
+
+int _strlen(char *s)
 {
-	int len = 0;
+	int longi = 0;
 
 	while (*s != '\0')
-
 	{
-		len++;
+		longi++;
 		s++;
 	}
-
-	return (len);
+	return (longi);
 }
