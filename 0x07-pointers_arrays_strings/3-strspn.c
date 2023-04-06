@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strspn - function that gets the length of a prefex substring
+ * _strspn - Entry point
  * @s: input
  * @accept: input
  * Return: Always 0 (success)
@@ -8,21 +8,22 @@
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int n = 0;
-	int v;
+	int r;
 
 	while (*s)
 	{
-		for (v = 0; accept[v]; v++)
+		for (r = 0; accept[r]; r++)
 
 		{
-			if (*s == accept[v])
+			if (*s == accept[r])
 			{
 				n++;
-				breack;
+				break;
 			}
-			else if (accept[v + 1] == '\0')
+			else if (accept[r + 1] == '\0')
 				return (n);
-		}s++;
+		}
+		s++;
 	}
 	return (n);
 }
