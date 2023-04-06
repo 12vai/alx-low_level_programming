@@ -4,7 +4,10 @@
  * @dest: pointer to the memory location where the copied bytes will be stored.
  * @src: pointer to the memory location where the bytes to be copied.
  * @n: number of bytes
+ *
+ * Return: copy memory with a byte change
  */
+
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
 	int v = 0;
