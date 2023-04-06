@@ -32,11 +32,11 @@ int comparator(char *s, int n1, int n2)
 }
 
 /**
- * is_palindrom - detects if a string  is a palindrom.
+ * is_palindrome - detects if a string  is a palindrome.
  * @s: string.
- * Return: 1 if s is a palindrom, 0 is not
+ * Return: 1 if s is a palindrome, 0 is not
  */
-int is_palindrom(char *s)
+int is_palindrome(char *s)
 {
 	if (*s == '\0')
 		return (1);
