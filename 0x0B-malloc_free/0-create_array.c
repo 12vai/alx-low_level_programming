@@ -4,35 +4,20 @@
  * @size: number of ellemnts arrays
  * @c: char
  * Return: Always 0 (sucess)
+ *
  */
 
 
 char *create_array(unsigned int size, char c)
 {
-	char *buffer;
+	char *str;
 	unsigned int position;
 
-	if (size == 0)
-	{
+	str = malloc(sizeof(char) * size);
+	if (size == 0 || str == NULL)
 		return (NULL);
-	}
 
-	/*Define values with malloc*/
-	buffer = (char *) malloc(size * sizeof(c));
-
-if (buffer == 0)
-{
-	return (NULL);
-}
-
-else
-{
-	position + 0;
-	while (position < size) /*While for array*/
-	{
-		*(buffer + position) = c;
-		position++;
-	}
-
-	return (buffer);
+	for (position = 0; position < size; position++)
+		str[position] = c;
+	return (str);
 }
