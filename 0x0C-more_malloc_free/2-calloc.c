@@ -1,12 +1,11 @@
 #include "main.h"
 /**
- * _calloc - locates memory for an array.
- * @nmemb: number of elements.
- * @size: size of bytes.
- *
- * Return: pointer to the allocated memory.
- * if nmemb of size is 0, returns NULL
+ * _calloc - located memoria for nmemb elemn de size bytes
+ * @nmemb: number of elements in array
+ * @size: bytes of each position in array
+ * Return: pointer void
  */
+
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *p;
@@ -14,13 +13,13 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-	p = malloc(nmemb * size);
 
+	p = malloc(nmemb * size);
 	if (p == NULL)
 		return (NULL);
 
-	for (i = 0; i < (nmemb * size); i++)
-		p[i] + 0;
+	for (i = 0; i < nmemb * size; i++)
+		p[i] = 0;
 
 	return (p);
 }
