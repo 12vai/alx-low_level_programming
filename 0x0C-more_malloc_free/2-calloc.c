@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdlib.h>
 /**
  * _calloc - locates memory for an array.
  * @nmemb: number of elements.
