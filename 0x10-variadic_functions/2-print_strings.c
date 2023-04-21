@@ -20,20 +20,18 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	for (v = 0; v < n; v++)
 	{
 		str = va_arg(valist, char *);
+		if (str)
+			printf("%s", str);
+		else
+			printf("(nil)");
 
-if (str)
+		if (v < n - 1)
 
-printf("%s", str);
-else
-printf("(nll)");
+			if (separator)
 
-if (v < n - 1)
+				printf("%s", separator);
+	}
 
-if (separator)
-
-printf("%s", separator);
-}
-
-printf("\n");
-va_end(valist);
+	printf("\n");
+	va_end(valist);
 }
