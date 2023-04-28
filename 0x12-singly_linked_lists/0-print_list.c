@@ -8,17 +8,31 @@
  */
 size_t print_list(const list_t *h)
 {
-	size_t t = 0;
+	list_t *head = NULL;
 
-	while (h != NULL)
-	{
-		if (h->str != NULL)
-			printf("[%d] %s\n", h->len, h->str);
-		else
-			printf("[0] (nil)\n");
-		t++;
+	head = malloc(sizeof(list_t));
+	if (head == NULL)
+		return (2);
 
-		h = h->next;
-	}
-	return (t);
+	head->str = "Hello";
+
+	head->len = 6;
+
+	head->next = NULL;
+
+	list_t *seco = malloc(sizeof(list_t));
+
+	if (seco == NULL)
+		return (2);
+	seco->str = "World";
+	seco->len = 6;
+	seco->next = NULL;
+
+	head->next = seco;
+
+	size_t count = print_list(head);
+
+	printf("Number of nodes: %lu\n", count);
+
+	return (0);
 }
