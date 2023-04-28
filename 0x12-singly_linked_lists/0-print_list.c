@@ -3,36 +3,24 @@
 
 /**
  * print_list - prints all the elements of a list_t list.
- * @h: pointer to the list_t list to print.
+ * @h: pointer to the list_t list.
  * Return: the number of nodes printed.
  */
 size_t print_list(const list_t *h)
 {
-	list_t *head = NULL;
+	size_t nodes = 0;
 
-	head = malloc(sizeof(list_t));
-	if (head == NULL)
-		return (2);
+	while (h)
+	{
+		if (h->str == NULL)
+			printf("[0] (nil)\n");
 
-	head->str = "Hello";
+		else
+			printf("[%d] %s\n", h->len, h->str);
+		nodes++;
+		h = h->next;
 
-	head->len = 6;
+	}
 
-	head->next = NULL;
-
-	list_t *seco = malloc(sizeof(list_t));
-
-	if (seco == NULL)
-		return (2);
-	seco->str = "World";
-	seco->len = 6;
-	seco->next = NULL;
-
-	head->next = seco;
-
-	size_t count = print_list(head);
-
-	printf("Number of nodes: %lu\n", count);
-
-	return (0);
+	return (nodes);
 }
