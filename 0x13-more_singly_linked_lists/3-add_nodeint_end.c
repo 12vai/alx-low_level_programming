@@ -26,6 +26,11 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		return (new_node);
 	}
 
+	/* traverse the list until the node is reached */
+	current_node = *head;
+	while (current_node->next != NULL)
+		current_node = current_node->next;
+
 	/* add new node to the end of the list */
 	current_node->next = new_node;
 	return (new_node);
