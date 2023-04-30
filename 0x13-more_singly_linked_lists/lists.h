@@ -3,11 +3,12 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <stddef.h> /* for size_t */
 
 /**
  * struct listint_s - singly linked list
  * @n: interger
- * @next: points to the node
+ * @next: points to the next node
  *
  * Description: singly linked list node structure
  *
