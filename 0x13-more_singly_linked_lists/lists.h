@@ -5,7 +5,7 @@
 #include <stdio.h>
 
 /**
- * struct listin_s - singly linked list
+ * struct listint_s - singly linked list
  * @n: interger
  * @next: points to the node
  *
