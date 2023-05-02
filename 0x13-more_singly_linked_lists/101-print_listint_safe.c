@@ -23,7 +23,11 @@ size_t print_listint_safe(const listint_t *head)
 		}
 		if (current != NULL && current < loop)
 			loop = current;
+		current = current->next;
 	}
-
-	return (count);
+	if (current == NULL)
+	{
+		return (count);
+	}
+	exit(98);
 }
