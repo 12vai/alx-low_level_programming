@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdlib.h>
 /**
  * grt_bit - gets the value of a given index.
  * @n: the bit.
